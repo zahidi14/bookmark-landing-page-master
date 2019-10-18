@@ -1,0 +1,153 @@
+@SoftBlue: hsl(231, 69%, 60%);
+@SoftRed: hsl(0, 94%, 66%);
+@GrayishBlue: hsl(229, 8%, 60%);
+@VeryDarkBlue: hsl(229, 31%, 21%);
+@body-font: 18px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: 'Rubik', sans-serif;
+    
+    font-size: @body-font;
+}
+h2{
+    font-size: 32px;
+}
+h1{
+    font-size: 46px;
+}
+
+header{
+    nav{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: 150px;
+        align-items: center;
+        ul{
+            list-style: none;
+            text-transform: uppercase;
+            li{
+                a{
+                    color: @VeryDarkBlue;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+                a:hover{
+                    color: @SoftRed;
+                }
+                button{
+                    color: white;
+                    background-color: @SoftRed;
+                    width: 100px;
+                    height: 40px;
+                    border-radius: 7px;
+                }
+                button:hover{
+                    color: @SoftRed;
+                    background-color: white;
+                    border: 2px solid @SoftRed;
+                }
+            }
+        }
+    }
+    .intro{
+        display: flex;
+        width: 100%;
+        .intro-content{
+            h1{
+                color: @VeryDarkBlue;
+               
+            }
+            p{
+                color: @GrayishBlue;
+                margin-bottom: 28px;
+            }
+            button{
+                width: 170px;
+                height: 50px;
+                border-radius: 5px;
+                margin-right: 15px;
+            }
+            .blue{
+                background-color: @SoftBlue;
+                color: #fff;
+            }
+            .blue:hover{
+                border: 1px solid @SoftBlue;
+                color: @SoftBlue;
+                background-color: white;
+            }
+            .white{
+                color: @GrayishBlue; 
+                background-color:#fff; 
+
+            }
+            .white:hover{
+                border: 1px solid @VeryDarkBlue;
+                color: @VeryDarkBlue;
+            }
+
+        }
+        
+    }
+}
+
+section.feature{
+    display: block;
+    text-align: center;
+    p{
+        padding: 2em 25%;
+    }
+    a{
+       text-decoration: underline;
+    }
+    a:active{
+        border-bottom: 3px solid @SoftRed;
+    }
+  
+}
+
+
+@media only screen and (min-width: 800px){
+    header{
+       
+        
+        nav{
+            padding:0 6em;
+            .logo-icon, ul li{
+                align-self: center;
+            }
+            ul{
+                margin-left: auto;
+                li{
+                    display: inline-block;
+                    padding: 0 10px;
+                }
+
+            }
+        }
+        
+        .intro{
+            justify-content: space-between;
+            padding-left:6em; 
+            .intro-content{
+                order: 1;
+                h1{
+                    margin: 80px 0;
+                }
+            }
+            .intro-pic{
+                order: 2;
+            }
+        }
+    }
+
+    section.feature{
+        display: inline-block;
+       
+    }
+}
+
