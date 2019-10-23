@@ -2,6 +2,7 @@
 @SoftRed: hsl(0, 94%, 66%);
 @GrayishBlue: hsl(229, 8%, 60%);
 @VeryDarkBlue: hsl(229, 31%, 21%);
+@nav: rgba(37, 43, 70, 0.5);
 @body-font: 18px;
 *{
     margin: 0;
@@ -273,6 +274,12 @@ footer{
             border-radius: 10px;
             padding: 20px;
             margin-right: 1.5em;
+            
+        }
+        input[type=text].alert{
+            border: 2px solid @SoftRed;
+            background: url(images/icon-error.svg) no-repeat scroll 90% 10px;
+            background-color: #fff;
         }
         button{
             width: 150px;
@@ -431,8 +438,40 @@ footer{
             .logo-icon{
                 float: left;
             }
-            ul li{
+            ul{
                 display: none;
+            }
+        }
+        nav.show{
+            position: fixed;
+            display: block;
+            width: 100%;
+           
+            height: 100%;
+            color: #fff;
+            background-color:@nav;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            ul{
+                display: block;
+                text-align: center;
+                margin: 10em auto;
+                li{
+                    margin: 1em auto;
+                    padding-top: 20px;
+                   border-top: .5px solid #fff;
+                    a{
+                        color: #fff;
+                        
+                    }
+                    button{
+                        width: 80%;
+                        color: #fff;
+                        border: 2px solid #fff;
+                        background-color: @nav;
+                    }
+                }
             }
         }
         .intro{
@@ -450,6 +489,9 @@ footer{
         }
     }
     section{
+        .header{
+            padding: 2em .5em;
+        }
         .tab-wrapper{
             display: block;
             width: 100%;
@@ -462,20 +504,26 @@ footer{
             img{
                 width: 100%;
                 height: auto;
+                margin: .5em auto;
             }
             .tab-desc{
                 width: 100%;
+                line-height: 1.5;
             }
-           div{
-               display: block;
-           }
+            button{
+                margin-top: 1.5em;
+            }
+          
         }
        .card-container{
            display: block;
            .card{
-               margin: 1em auto;
+               margin: 2em auto;
                width: 70%;
            }
+       }
+       .colapse{
+           width: 80%;
        }
     }
     footer{

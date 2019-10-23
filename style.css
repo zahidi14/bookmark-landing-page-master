@@ -227,6 +227,11 @@ footer .contact input[type=text] {
   padding: 20px;
   margin-right: 1.5em;
 }
+footer .contact input[type=text].alert {
+  border: 2px solid #fa5757;
+  background: url(images/icon-error.svg) no-repeat scroll 90% 10px;
+  background-color: #fff;
+}
 footer .contact button {
   width: 150px;
 }
@@ -362,8 +367,38 @@ footer .attribution a {
   header nav .logo-icon {
     float: left;
   }
-  header nav ul li {
+  header nav ul {
     display: none;
+  }
+  header nav.show {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: rgba(37, 43, 70, 0.5);
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  header nav.show ul {
+    display: block;
+    text-align: center;
+    margin: 10em auto;
+  }
+  header nav.show ul li {
+    margin: 1em auto;
+    padding-top: 20px;
+    border-top: .5px solid #fff;
+  }
+  header nav.show ul li a {
+    color: #fff;
+  }
+  header nav.show ul li button {
+    width: 80%;
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: rgba(37, 43, 70, 0.5);
   }
   header .intro {
     display: block;
@@ -375,6 +410,9 @@ footer .attribution a {
   header .intro .intro-pic img {
     width: 100%;
     height: auto;
+  }
+  section .header {
+    padding: 2em .5em;
   }
   section .tab-wrapper {
     display: block;
@@ -389,19 +427,24 @@ footer .attribution a {
   section .tab-content img {
     width: 100%;
     height: auto;
+    margin: .5em auto;
   }
   section .tab-content .tab-desc {
     width: 100%;
+    line-height: 1.5;
   }
-  section .tab-content div {
-    display: block;
+  section .tab-content button {
+    margin-top: 1.5em;
   }
   section .card-container {
     display: block;
   }
   section .card-container .card {
-    margin: 1em auto;
+    margin: 2em auto;
     width: 70%;
+  }
+  section .colapse {
+    width: 80%;
   }
   footer .contact {
     padding: 1em;

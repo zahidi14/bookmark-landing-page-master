@@ -1,3 +1,18 @@
+//responsive nav script
+function resp(){
+  var u=document.getElementById("respon");
+  var icon = document.getElementById("ic");
+  var svg = document.getElementById("bookCol"); 
+  if(u.className === " "){
+    console.log("tes");
+    u.classList.add("show");
+    icon.src="images/icon-close.svg";
+    svg.fill='#fff';
+  }else{
+    u.classList.remove("show");
+    icon.src="images/icon-hamburger.svg";
+  }
+}
 
 
 function selector(evt, selectTab){
@@ -11,15 +26,25 @@ function selector(evt, selectTab){
        tablinks[i].className = tablinks[i].className.replace(" active","");
        console.log("cok");
    }
-   if(window.matchMedia("(max-width: 800px)")){
+   if(window.matchMedia("(max-width: 800px)").matches){
     document.getElementById(selectTab).style.display = "block";
-    console.log("flex");
-   }else{
-    document.getElementById(selectTab).style.display = "flex";
     console.log("block");
+    evt.currentTarget.className +=" active";
+   }else if(window.matchMedia("(min-width: 800px)").matches){
+    document.getElementById(selectTab).style.display = "flex";
+    console.log("flex");
+    evt.currentTarget.className +=" active";
    }
    
-   evt.currentTarget.className +=" active";
+   
+}
+
+function emailVal(){
+  var filter = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  var email = document.getElementById("txtEmail");
+  if(!filter.test(email.value)){
+    email.classList.add("alert");
+  }
 }
 
 function collap(){
