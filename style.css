@@ -370,36 +370,6 @@ footer .attribution a {
   header nav ul {
     display: none;
   }
-  header nav.show {
-    position: fixed;
-    display: block;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    background-color: rgba(37, 43, 70, 0.5);
-    z-index: 1;
-    top: 0;
-    left: 0;
-  }
-  header nav.show ul {
-    display: block;
-    text-align: center;
-    margin: 10em auto;
-  }
-  header nav.show ul li {
-    margin: 1em auto;
-    padding-top: 20px;
-    border-top: .5px solid #fff;
-  }
-  header nav.show ul li a {
-    color: #fff;
-  }
-  header nav.show ul li button {
-    width: 80%;
-    color: #fff;
-    border: 2px solid #fff;
-    background-color: rgba(37, 43, 70, 0.5);
-  }
   header .intro {
     display: block;
   }
@@ -472,5 +442,37 @@ footer .attribution a {
   }
   footer .bottom-nav ul li {
     margin: 1em auto;
+  }
+}
+@media only screen and (max-width: 800px) {
+  nav.show {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: rgba(37, 43, 70, 0.5);
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  nav.show ul {
+    display: block;
+    text-align: center;
+    margin: 10em auto;
+  }
+  nav.show ul li {
+    margin: 1em auto;
+    padding-top: 20px;
+    border-top: .5px solid #fff;
+  }
+  nav.show ul li a {
+    color: #fff;
+  }
+  nav.show ul li button {
+    width: 80%;
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: rgba(37, 43, 70, 0.5);
   }
 }

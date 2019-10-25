@@ -3,14 +3,15 @@ function resp(){
   var u=document.getElementById("respon");
   var icon = document.getElementById("ic");
   var svg = document.getElementById("bookCol"); 
-  if(u.className === " "){
+  if(u.className === ""){
     console.log("tes");
-    u.classList.add("show");
     icon.src="images/icon-close.svg";
-    svg.fill='#fff';
-  }else{
+    svg.fill="#fff";   
+    u.classList.add("show");
+  }else {
     u.classList.remove("show");
     icon.src="images/icon-hamburger.svg";
+     
   }
 }
 
